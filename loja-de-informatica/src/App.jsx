@@ -26,8 +26,14 @@ function App() {
         onChange = {handleChange}
         />
 
-        <h3>Marca</h3>
         <dropDown />
+
+        <dropDown 
+        label = "Marca"
+        name = "marca"
+        options = {[hp, dell, positivo, asus]}
+        onChange = {handleChange}
+        />
 
       </form>
 
