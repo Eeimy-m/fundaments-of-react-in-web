@@ -5,8 +5,8 @@ function App() {
 
   return (
     <div>
-      <banner />
-
+      <h1>Dados do produto</h1>
+      
       <h3>Seção</h3>
       <dropDown />
 
