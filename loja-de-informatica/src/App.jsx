@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <h1>Dados do produto</h1>
+      <banner />
 
       <h3>Seção</h3>
       <dropDown />
