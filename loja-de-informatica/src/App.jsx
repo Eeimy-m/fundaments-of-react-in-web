@@ -4,7 +4,12 @@ import { useState } from 'react';
 
 function App() {
 
-const [produto, setProduto] = useState({});
+const [produto, setProduto] = useState({
+    nome: '',
+    preco: '',
+    secao: '',
+    marca: ''
+});
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -13,6 +18,14 @@ const [produto, setProduto] = useState({});
       ...produto,
       [name]: value
     });
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert(`Produto Cadastrado com Sucesso!
+    Nome: ${produto.nome}
+    Preço: R$ ${produto.preco}
+    Seção: ${produto.secao}
+    Marca: ${produto.marca}`);
   }
   return (
     <div>
