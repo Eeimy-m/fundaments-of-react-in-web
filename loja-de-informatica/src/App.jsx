@@ -1,7 +1,10 @@
 import './App.css'
-import dropDown from './compnents/dropDown/dropDown';
+import DropDown from './components/dropDown/dropDown.jsx';
+import { useState } from 'react';
 
 function App() {
+
+const [produto, setProduto] = useState({});
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -11,7 +14,6 @@ function App() {
       [name]: value
     });
   }
-
   return (
     <div>
 
@@ -19,19 +21,18 @@ function App() {
 
       <form action="">
 
-        <dropDown 
+        <DropDown 
         label = "Seção"
         name = "secao"
-        options = {[Computadores, Acessórios, Impressoras, Games, Gadgets]}
+        options = {["Computadores", "Acessórios", "Impressoras", "Games", "Gadgets"]}
         onChange = {handleChange}
         />
 
-        <dropDown />
 
-        <dropDown 
+        <DropDown 
         label = "Marca"
         name = "marca"
-        options = {[hp, dell, positivo, asus]}
+        options = {["hp", "dell", "positivo", "asus"]}
         onChange = {handleChange}
         />
 
