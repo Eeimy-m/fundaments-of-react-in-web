@@ -4,7 +4,7 @@ import './dropDown.css';
 const DropDown = ({label, name, options, onChange}) => {
 
     return (
-        <div className="dropDown">
+        <div className="dropdown-container">
 
             <label>{label}</label>
 

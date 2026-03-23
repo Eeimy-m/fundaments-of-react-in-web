@@ -1,0 +1,34 @@
+/* Organiza o label em cima e o select embaixo */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Estilo do texto */
+.dropdown-container label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+/* Estilo da caixa de seleção (Igualzinho ao do input de texto) */
+.dropdown-container select {
+  padding: 12px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Efeito quando clica na caixa */
+.dropdown-container select:focus {
+  border-color: #0066ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
+}

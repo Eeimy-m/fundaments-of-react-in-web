@@ -59,7 +59,7 @@ const [produto, setProduto] = useState({
         onChange = {handleChange}
         />
 
-        <button type="submit" className="btn-salvar">Salvar Produto</button>
+        <button type="submit" className="btn-salvar">Inserir Produto</button>
       </form>
 
     </div>
