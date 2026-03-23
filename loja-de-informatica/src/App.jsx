@@ -32,7 +32,22 @@ const [produto, setProduto] = useState({
 
       <h1>Dados do produto</h1>
 
-      <form action="">
+      <form onSubmit={handleSubmit}>
+
+        <div className="input-group">
+          <label>Nome do Produto</label>
+          <input type="text" name="nome" placeholder="Ex: Mouse sem fio" />
+        </div>
+
+        <div className="input-group">
+          <label>Nome do Produto</label>
+          <input type="text" name="nome" placeholder="Ex: Mouse sem fio" onChange={handleChange} required />
+        </div>
+
+        <div className="input-group">
+          <label>Preço (R$)</label>
+          <input type="number" name="preco" placeholder="Ex: 150.00" onChange={handleChange} required />
+        </div>
 
         <DropDown 
         label = "Seção"
@@ -49,6 +64,7 @@ const [produto, setProduto] = useState({
         onChange = {handleChange}
         />
 
+        <button type="submit" className="btn-salvar">Salvar Produto</button>
       </form>
 
     </div>
