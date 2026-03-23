@@ -1,18 +1,23 @@
 import './App.css'
 import DropDown from './components/dropDown/dropDown.jsx';
+import ProductList from './components/productList/productList.jsx';
 import { useState } from 'react';
 
 function App() {
 
-const [produto, setProduto] = useState({
-    nome: '',
-    preco: '',
-    secao: '',
-    marca: ''
-});
+  const [produto, setProduto] = useState({
+      nome: '',
+      preco: '',
+      secao: '',
+      marca: '',
+      condicao: ''
+  });
+  const [listaProdutos, setListaProdutos] = useState([]);
+
 
   function handleChange(e) {
     const { name, value } = e.target;
+    
 
     setProduto({
       ...produto,
@@ -21,15 +26,12 @@ const [produto, setProduto] = useState({
   }
   function handleSubmit(e) {
     e.preventDefault();
-    alert(`Produto Cadastrado com Sucesso!
-    Nome: ${produto.nome}
-    Preço: R$ ${produto.preco}
-    Seção: ${produto.secao}
-    Marca: ${produto.marca}
-    Condição: ${produto.condicao}`);
+    setListaProdutos([...listaProdutos, produto]);
+    setProduto({ nome: '', preco: '', secao: '', marca: '', condicao: '' });
   }
   return (
-    <div>
+    <div className="layout-principal">
+      <div className="app-container">
 
       <h1>Dados do produto</h1>
 
@@ -56,7 +58,7 @@ const [produto, setProduto] = useState({
         <DropDown 
         label = "Marca"
         name = "marca"
-        options = {["hp", "dell", "positivo", "asus"]}
+        options = {["HP", "Dell", "Positivo", "ASUS"]}
         onChange = {handleChange}
         />
 
@@ -89,7 +91,8 @@ const [produto, setProduto] = useState({
 
         <button type="submit" className="btn-salvar">Inserir Produto</button>
       </form>
-
+      </div>
+      <ProductList listaProdutos={listaProdutos} />
     </div>
   );
 
