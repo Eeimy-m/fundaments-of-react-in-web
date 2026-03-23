@@ -25,7 +25,8 @@ const [produto, setProduto] = useState({
     Nome: ${produto.nome}
     Preço: R$ ${produto.preco}
     Seção: ${produto.secao}
-    Marca: ${produto.marca}`);
+    Marca: ${produto.marca}
+    Condição: ${produto.condicao}`);
   }
   return (
     <div>
@@ -58,6 +59,33 @@ const [produto, setProduto] = useState({
         options = {["hp", "dell", "positivo", "asus"]}
         onChange = {handleChange}
         />
+
+        <div className="radio-group">
+          <label>Condição do Produto:</label>
+          <div className="radio-options">
+            <label>
+              <input 
+                type="radio" 
+                name="condicao" 
+                value="Novo" 
+                onChange={handleChange} 
+                checked={produto.condicao === 'Novo'} 
+                required 
+              /> Novo
+            </label>
+            
+            <label>
+              <input 
+                type="radio" 
+                name="condicao" 
+                value="Usado" 
+                onChange={handleChange} 
+                checked={produto.condicao === 'Usado'} 
+                required 
+              /> Usado
+            </label>
+          </div>
+        </div>
 
         <button type="submit" className="btn-salvar">Inserir Produto</button>
       </form>
