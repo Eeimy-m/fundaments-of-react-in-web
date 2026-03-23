@@ -36,11 +36,6 @@ const [produto, setProduto] = useState({
 
         <div className="input-group">
           <label>Nome do Produto</label>
-          <input type="text" name="nome" placeholder="Ex: Mouse sem fio" />
-        </div>
-
-        <div className="input-group">
-          <label>Nome do Produto</label>
           <input type="text" name="nome" placeholder="Ex: Mouse sem fio" onChange={handleChange} required />
         </div>
 

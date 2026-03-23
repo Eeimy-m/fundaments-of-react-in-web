@@ -1,19 +1,19 @@
 import React from "react";
 import './dropDown.css';
 
-const dropDown = (label, name, options, onChange) => {
+const DropDown = ({label, name, options, onChange}) => {
 
     return (
         <div className="dropDown">
 
             <label>{label}</label>
 
-            <select name="name" onChange={onChange}>
+            <select name={name} onChange={onChange}>
                 <option value="">Selecione</option>
 
-                {options.map((item,index) => (
-                    <option key={index} value={item}>
-                        {item}
+                {options && options.map((option, index) => (
+                    <option key={index} value={option}>
+                        {option}
                     </option>
                 ))}
 
@@ -23,4 +23,4 @@ const dropDown = (label, name, options, onChange) => {
     )
 }
 
-export default dropDown;
+export default DropDown;
