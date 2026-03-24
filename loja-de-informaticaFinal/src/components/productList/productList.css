@@ -1,0 +1,96 @@
+
+.lista-container {
+  flex: 1;
+  background-color: #1a191976;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.077);
+  min-height: 400px;
+}
+
+.lista-container h2 {
+  margin-top: 0;
+  color: #333333;
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.mensagem-vazia {
+  color: #777777;
+  font-style: italic;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-produto {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.img-marca {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain; 
+  margin-bottom: 15px;
+}
+
+
+.info-produto h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333333;
+}
+
+.preco-produto {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0066ff; 
+  margin: 0 0 15px 0;
+}
+
+
+.tag-secao, .tag-condicao {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 4px 2px;
+}
+
+
+.tag-secao {
+  background-color: #e6f0ff;
+  color: #0052cc;
+}
+
+
+.tag-condicao.novo {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.tag-condicao.usado {
+  background-color: #fff3cd;
+  color: #856404;
+}

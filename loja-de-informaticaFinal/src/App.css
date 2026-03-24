@@ -1,0 +1,79 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 12px;
+  font-size: 15px;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #0066ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
+}
+
+.btn-salvar {
+  background-color: #0066ff;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-salvar:hover {
+  background-color: #0052cc;
+}
+/* --- Estilos para as opções de Novo/Usado --- */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.radio-group > label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 20px; /* Dá um espacinho entre o 'Novo' e o 'Usado' */
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #c4baba;
+  cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 0; /* Remove a margem padrão estranha do HTML */
+}
